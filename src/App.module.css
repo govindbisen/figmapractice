@@ -9,7 +9,7 @@
 .firstpage {
   position: relative;
   width: 100%;
-  min-height: 100vh;
+  min-height: 110vh;
   overflow: hidden;
 }
 
@@ -47,10 +47,11 @@
   display: flex;
   align-items: center;
   gap: 35px;
-  background: white;
+  background: rgba(236, 232, 232, 0.6);
   padding: 1rem 2rem;
   border-radius: 50px;
   text-align: center;
+  backdrop-filter: blur(10px);
 }
 .bar_nav_item {
   margin: 10px 20px;
@@ -89,7 +90,7 @@
 
 .firstpage_content {
   position: absolute;
-  top: 70%;
+  top: 66%;
   width: 100%;
 
   display: flex;
@@ -140,9 +141,9 @@
 }
 
 .firstpage_content_button {
-  margin-top: 30px;
+  margin-top: 20px;
 
-  padding: 18px 70px;
+  padding: 16px 60px;
   border: none;
   border-radius: 50px;
 
@@ -163,4 +164,40 @@
 
 .firstpage_content_button:hover {
   transform: scale(1.05);
+}
+
+.pick_park {
+  width: 100%;
+  background: #f3f3f3;
+  padding: 40px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pick_park h2 {
+  margin-top: 06px;
+  font-size: 3rem;
+  font-weight: 900;
+  color: black;
+  line-height: 0.8;
+  text-transform: uppercase;
+  padding: 60px 0 20px;
+}
+
+.pick_park_experience {
+  margin-top: 10px;
+  background: #e5a000;
+  padding: 10px 20px;
+  transform: skew(-15deg);
+}
+
+.pick_park_experience span {
+  display: inline-block;
+  transform: skew(15deg);
+  color: white;
+  font-size: 3.2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 1;
 }

@@ -60,12 +60,8 @@ function App() {
                 Stay</p></div>
             <div className={styles.bar_nav_item}>
               <span>
-
                 <LuPartyPopper />
-
               </span>
-
-
               <p>Events
               </p></div>
           </div>
@@ -91,6 +87,49 @@ function App() {
         </div>
       </div>
 
+
+      <div className={styles.pick_park}>
+        <h2>PICK YOUR</h2>
+
+        <div className={styles.pick_park_experience}>
+          <span>PARK EXPERIENCE</span>
+        </div>
+      </div>
+
+      {/*  second page */}
+
+      <div className="secondpage">
+
+        <div className="expcontainerparent">
+
+          <div className="containerparent">
+            <h1>Theme Park</h1>
+            <p>Theme park with rides. shows and magic for all ages.</p>
+            <button>Explore More</button>
+          </div>
+          <div className="containerparent">
+            <h1>Water Park</h1>
+            <p>Water park with rides. magic for all ages.</p>
+            <button>Explore More</button>
+
+          </div>
+          <div className="containerparent">
+            <h1>Snow Park</h1>
+            <p></p>
+            <button>Explore More</button>
+
+          </div>
+          <div className="containerparent">
+            <h1></h1>
+            <p></p>
+            <button>Explore More</button>
+
+          </div>
+
+
+        </div>
+
+      </div>
 
 
     </div>
