@@ -7,6 +7,7 @@ import { GiTridentShield } from "react-icons/gi";
 import { FaCalendarAlt } from "react-icons/fa";
 import { LuPartyPopper } from "react-icons/lu";
 import { FaHotel } from "react-icons/fa";
+import Thx from './ThemeParkVideoShowcaseCarousel'
 
 import bgVideo from './assets/video/bgvideo.mp4';
 import logo from './assets/images/imagicaa_logo.png';
@@ -478,14 +479,9 @@ function App() {
         </div>
         <div className={styles.svg_container}>
 
-          <div className={styles.carousel_container}>
-
-            {data.map((d, i) => <div className={`${styles.carousel_box_item} ${i == corosalActive ? styles.active : ""}`}>{d.heading}</div>)}
-
-          </div>
 
 
-
+          <Thx />
 
 
         </div>
@@ -494,6 +490,8 @@ function App() {
 
 
       </div>
+
+
 
 
 

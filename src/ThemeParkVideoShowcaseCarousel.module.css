@@ -1,0 +1,295 @@
+.themeParkShowcaseCarouselWrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  padding-bottom: 120px;
+}
+
+.themeParkShowcaseCarouselTrack {
+  position: relative;
+  width: 100%;
+  height: 850px;
+  overflow: visible; /* buttons + side cards visible */
+}
+
+/* MAIN CARD */
+.themeParkShowcaseCarouselCard {
+  position: absolute;
+  left: 50%;
+  top: 68%; /* thoda upar */
+  width: 24vw;
+  max-width: 360px;
+  min-width: 240px;
+  height: 380px; /* height increase */
+  border-radius: 28px;
+  overflow: hidden;
+  background: #12091f;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+
+  box-shadow:
+    0 12px 24px rgba(0, 0, 0, 0.18),
+    0 24px 60px rgba(0, 0, 0, 0.28);
+
+  transform-origin: center center;
+
+  transition:
+    transform 0.65s cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 0.65s cubic-bezier(0.22, 1, 0.36, 1),
+    filter 0.65s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.65s cubic-bezier(0.22, 1, 0.36, 1);
+
+  will-change: transform, opacity;
+}
+
+/* VIDEO */
+.themeParkShowcaseCarouselCardVideo {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* OVERLAY */
+.themeParkShowcaseCarouselCardOverlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+
+  background: linear-gradient(
+    180deg,
+    rgba(10, 7, 25, 0.08) 0%,
+    rgba(10, 7, 25, 0.2) 28%,
+    rgba(10, 7, 25, 0.56) 62%,
+    rgba(10, 7, 25, 0.92) 100%
+  );
+}
+
+/* CONTENT */
+.themeParkShowcaseCarouselCardContent {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  z-index: 2;
+
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.themeParkShowcaseCarouselCardBadge {
+  width: fit-content;
+  padding: 6px 12px;
+  border-radius: 999px;
+
+  background: rgba(255, 255, 255, 0.14);
+  backdrop-filter: blur(8px);
+
+  border: 1px solid rgba(255, 255, 255, 0.14);
+
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.themeParkShowcaseCarouselCardHeading {
+  margin: 0;
+
+  color: #ffffff;
+  font-size: 24px;
+  line-height: 1.2;
+  font-weight: 900;
+
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+
+  overflow: hidden;
+}
+
+.themeParkShowcaseCarouselCardDescription {
+  margin: 0;
+
+  color: rgba(255, 255, 255, 0.86);
+
+  font-size: 14px;
+  line-height: 1.6;
+
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+
+  overflow: hidden;
+}
+
+/* ACTIVE */
+.themeParkShowcaseCarouselCardActive {
+  transform: translate(-50%, -50%) scale(1.18);
+
+  opacity: 1;
+  z-index: 5;
+
+  box-shadow:
+    0 20px 36px rgba(0, 0, 0, 0.24),
+    0 34px 80px rgba(0, 0, 0, 0.36);
+}
+
+/* LEFT SIDE */
+.themeParkShowcaseCarouselCardNearLeft {
+  transform: translate(calc(-50% - 340px), calc(-50% - 10px)) scale(0.92);
+
+  opacity: 0.95;
+  z-index: 4;
+}
+
+.themeParkShowcaseCarouselCardFarLeft {
+  transform: translate(calc(-50% - 650px), calc(-50% - 40px)) scale(0.78);
+
+  opacity: 0.55;
+  z-index: 3;
+
+  filter: blur(1px);
+}
+
+/* RIGHT SIDE */
+.themeParkShowcaseCarouselCardNearRight {
+  transform: translate(calc(-50% + 340px), calc(-50% - 10px)) scale(0.92);
+
+  opacity: 0.95;
+  z-index: 4;
+}
+
+.themeParkShowcaseCarouselCardFarRight {
+  transform: translate(calc(-50% + 650px), calc(-50% - 40px)) scale(0.78);
+
+  opacity: 0.55;
+  z-index: 3;
+
+  filter: blur(1px);
+}
+
+/* HIDDEN */
+.themeParkShowcaseCarouselCardHidden {
+  opacity: 0;
+
+  pointer-events: none;
+
+  transform: translate(-50%, -50%) scale(0.6);
+}
+
+/* BUTTON WRAPPER */
+.themeParkShowcaseCarouselButtons {
+  position: absolute;
+
+  bottom: 40px; /* visible now */
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  display: flex;
+  gap: 18px;
+
+  z-index: 100;
+}
+
+/* BUTTON */
+.themeParkShowcaseCarouselButton {
+  width: 64px;
+  height: 64px;
+
+  border: none;
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.95);
+
+  color: #5314b8;
+
+  font-size: 28px;
+  font-weight: 800;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 10px 18px rgba(0, 0, 0, 0.18),
+    inset 0 1px 0 rgba(255, 255, 255, 0.55);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.themeParkShowcaseCarouselButton:hover {
+  transform: scale(1.08);
+
+  box-shadow:
+    0 14px 24px rgba(0, 0, 0, 0.22),
+    inset 0 1px 0 rgba(255, 255, 255, 0.55);
+}
+
+/* TABLET */
+@media (max-width: 1100px) {
+  .themeParkShowcaseCarouselTrack {
+    height: 760px;
+  }
+
+  .themeParkShowcaseCarouselCard {
+    width: 280px;
+    height: 340px;
+  }
+
+  .themeParkShowcaseCarouselCardNearLeft {
+    transform: translate(calc(-50% - 240px), calc(-50% - 10px)) scale(0.9);
+  }
+
+  .themeParkShowcaseCarouselCardFarLeft {
+    transform: translate(calc(-50% - 420px), calc(-50% - 30px)) scale(0.75);
+  }
+
+  .themeParkShowcaseCarouselCardNearRight {
+    transform: translate(calc(-50% + 240px), calc(-50% - 10px)) scale(0.9);
+  }
+
+  .themeParkShowcaseCarouselCardFarRight {
+    transform: translate(calc(-50% + 420px), calc(-50% - 30px)) scale(0.75);
+  }
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .themeParkShowcaseCarouselWrapper {
+    padding-bottom: 100px;
+  }
+
+  .themeParkShowcaseCarouselTrack {
+    height: 620px;
+  }
+
+  .themeParkShowcaseCarouselCard {
+    width: 250px;
+    min-width: 250px;
+    height: 320px;
+
+    top: 60%;
+  }
+
+  .themeParkShowcaseCarouselCardNearLeft,
+  .themeParkShowcaseCarouselCardNearRight,
+  .themeParkShowcaseCarouselCardFarLeft,
+  .themeParkShowcaseCarouselCardFarRight {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .themeParkShowcaseCarouselCardActive {
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  .themeParkShowcaseCarouselButton {
+    width: 52px;
+    height: 52px;
+    font-size: 22px;
+  }
+}
